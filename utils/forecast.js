@@ -11,7 +11,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.info) {
             callback("Not a valid location")
         } else{
-            callback(undefined, body.current.weather_descriptions[0] + ' outside and It is currently ' + body.current.temperature + ' degress out. There is a ' + body.current.precip + '% chance of rain.')
+            callback(undefined,  body.current.weather_descriptions[0] + ' outside and It is currently ' + body.current.temperature + ' degress out. There is a ' + body.current.precip + '% chance of rain. ' + 'this forecast was generated at ' + body.current.observation_time )
         }
     })
 }
